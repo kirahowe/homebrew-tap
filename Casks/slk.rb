@@ -9,25 +9,25 @@ cask "slk" do
     end
   end
 
-  version "0.29.0"
+  version "0.29.1"
 
   on_macos do
     on_arm do
-      sha256 "e9e3cba3ac4a384981910cf2fcc06215df161b4833855f1eb2b8583ba477eda7"
+      sha256 "a245ef0f02b15ca8f34d8b9a801e1cdfcb434c75246e3e064f1ca1120f2d012a"
       url "https://github.com/kirahowe/slk/releases/download/v#{version}/slk_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "50e857a523b0150c8cfb1595189c3fb3dbfed045dcca91282fe25a7c25890467"
+      sha256 "a0af1989f763912c627ad3497ca31df2cab794fecbc5b00de6637218823d580f"
       url "https://github.com/kirahowe/slk/releases/download/v#{version}/slk_#{version}_darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "39050754641a7a7e8788d3a7aabdf700a8a0629188658b90f0a4e06c042900f7"
+      sha256 "c89f1e0feb61e36f36fd4ffe844516c4e7ff2c4d38fcd77cf7b0567bfaed560b"
       url "https://github.com/kirahowe/slk/releases/download/v#{version}/slk_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "deda250c1d64c82c192e0eef1b9b156083ce49a8fad78a8a38fe54a033f7a4f9"
+      sha256 "a745619d2905619b59355257f6e3a7037c1c31428563df8a87e2b6360bf2ea0e"
       url "https://github.com/kirahowe/slk/releases/download/v#{version}/slk_#{version}_linux_x86_64.tar.gz"
     end
   end
