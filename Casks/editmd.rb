@@ -1,6 +1,6 @@
 cask "editmd" do
-  version "0.1.0"
-  sha256 "6a011a012eb959751a71b1fe2ca2cce1e03d15751630f62bfd020a69cbf5b7be"
+  version "0.2.0"
+  sha256 "cc1efebacf4fb49a70235a35224254c5028686769ac82a37b593cb7c596fc6dc"
 
   url "https://github.com/kirahowe/editmd/releases/download/v#{version}/editmd-#{version}.zip"
   name "editmd"
