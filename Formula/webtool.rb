@@ -9,7 +9,7 @@ class Webtool < Formula
   def install
     # The release build only: the fixture build may fetch from a local
     # test server and is never installed.
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/webtool"
+    system "go", "build", *std_go_args, "./cmd/webtool"
     pkgshare.install "webtool.example.json"
   end
 

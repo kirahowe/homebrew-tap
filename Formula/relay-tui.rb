@@ -7,7 +7,7 @@ class RelayTui < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/relay-tui"
+    system "go", "build", *std_go_args, "./cmd/relay-tui"
   end
 
   test do
