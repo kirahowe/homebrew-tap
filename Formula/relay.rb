@@ -11,6 +11,14 @@ class Relay < Formula
 
   def install
     libexec.install "bin", "resources", "setup", "src"
+    # relay reads Calendar and Reminders through its own EventKit binary,
+    # which it looks for at tools/eventkit/eventkit under its install root.
+    # macOS ties the access grant to the binary, so after an upgrade
+    # `relay eventkit-access` may need running again in a terminal.
+    if OS.mac?
+      system "tools/eventkit/build.sh"
+      (libexec/"tools/eventkit").install "tools/eventkit/eventkit"
+    end
     # The repository's bb.edn carries test dependencies and tasks. bin/relay
     # only needs the paths, and a :deps entry would make bb fetch them.
     (libexec/"bb.edn").write "{:paths [\"src\" \"resources\"]}\n"
