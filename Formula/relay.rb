@@ -27,12 +27,10 @@ class Relay < Formula
 
   def caveats
     <<~EOS
-      Make a data directory, if you have none yet:
-        relay init --data ~/relay-data
-      The relay service finds it in ~/.config/relay/config.edn, a map
-      such as {:data "~/relay-data"}. Then start the service, which runs
-      relay serve, and relay tick every minute:
-        brew services start relay
+      Run relay to set it up. It asks for your Anthropic API key, which
+      it keeps in your login keychain, and where to keep your data, and
+      offers to keep running in the background.
+      For a scripted setup, relay init still works: relay init --help.
     EOS
   end
 
